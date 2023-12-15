@@ -300,6 +300,7 @@ open class TerminalView: NSView, NSTextInputClient, NSUserInterfaceValidations, 
     
     func setupScroller()
     {
+        if var scroller {
         let style: NSScroller.Style = .legacy
         let scrollerWidth = NSScroller.scrollerWidth(for: .regular, scrollerStyle: style)
         scroller = NSScroller(frame: NSRect(x: bounds.maxX - scrollerWidth, y: 0, width: scrollerWidth, height: bounds.height))
@@ -310,6 +311,7 @@ open class TerminalView: NSView, NSTextInputClient, NSUserInterfaceValidations, 
         addSubview (scroller)
         scroller.action = #selector(scrollerActivated)
         scroller.target = self
+            }
     }
     
     /// This method sents the `nativeForegroundColor` and `nativeBackgroundColor`
