@@ -96,7 +96,7 @@ open class TerminalView: NSView, NSTextInputClient, NSUserInterfaceValidations, 
     var terminal: Terminal!
 
     var selection: SelectionService!
-    var scroller: NSScroller!
+    public var scroller: NSScroller!
     
     // Attribute dictionary, maps a console attribute (color, flags) to the corresponding dictionary
     // of attributes for an NSAttributedString
