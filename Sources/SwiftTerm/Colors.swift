@@ -12,7 +12,7 @@ import Foundation
  * This represents the colors used in SwiftTerm, in particular for cells and backgrounds
  * in 16-bit RGB mode
  */
-public class Color: Hashable {
+public class Color: Hashable, Codable {
     /// Red component 0..65535
     public var red: UInt16
     /// Green component 0..65535
